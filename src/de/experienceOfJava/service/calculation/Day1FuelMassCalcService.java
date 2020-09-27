@@ -3,21 +3,34 @@ package de.experienceOfJava.service.calculation;
 import java.util.ArrayList;
 
 public class Day1FuelMassCalcService {
-    private ArrayList<String> result;
-    public Long moduleFuelMass(ArrayList<String> result){
-        Long fuelMassModule = 0L;
-        setArrayList(result);
 
-        for (int i = 0; i < result.size(); i++) {
-            fuelMassModule += (Long.parseLong(result.get(i)) / 3) - 2;
+    public Long part1FuelMass(ArrayList<String> result) {
+        Long fuelMassModule = 0L;
+        for (String s : result) {
+            fuelMassModule += (Long.parseLong(s) / 3) - 2;
         }
         return fuelMassModule;
     }
-    public void setArrayList(ArrayList<String> result){
-        this.result = result;
-    }
+    public Long part2FuelMass(ArrayList<String> result){
+        Long fuelMass2 = 0L;
+        Long sumFuel = 0L;
 
-    public ArrayList<String> getArrayList() {
-        return result;
+        // Calculation of the fuel mass depending on fuel mass per module
+        for (String s : result) {
+            Long a = Long.parseLong(s);
+            while (true) {
+                if (a > 8) {
+                    a = a / 3 - 2;
+                    sumFuel += a;
+                } else {
+                    fuelMass2 += sumFuel;
+                    sumFuel = 0L;
+                    break;
+                }
+            }
+        }
+
+        // return of the depending fuel mass
+        return fuelMass2;
     }
 }

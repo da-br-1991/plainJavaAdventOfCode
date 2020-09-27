@@ -17,15 +17,14 @@ public class Day1 implements Day {
 
         // Module zu benötigten Treibstoff umrechnen. Schleife - Addiere jedes Modul zum benötigten Gesantkraftstoff
         Day1FuelMassCalcService fuelService = new Day1FuelMassCalcService();
-        Long fuelMassModule = fuelService.moduleFuelMass(result);
-
+        Long part1FuelMass = fuelService.part1FuelMass(result);
+        Long part2FuelMass = fuelService.part2FuelMass(result);
         // Output Gesamtkraftstoff
         // part 1
-        System.out.println("benötigte Gesamtkraftstoffmenge für alle Module: " + fuelMassModule + " (Part One)");
+        System.out.println("Summe der benötigten Kraftstoffmenge abhängig vom Gewicht der jeweiligen Module: " + part1FuelMass + " (Lösung Part One)");
         // part 2
-        //System.out.println("benötigte Gesamtkraftstoffmenge für alle Module: " + fuelMass + " (Part Two)");
+        System.out.println("Summe der benötigten Kraftstoffmenge abhängig vom zusätzlichem Kraftstoffgewicht: " + part2FuelMass + " (Lösung Part Two)");
     }
-
 }
 
 
