@@ -1,0 +1,3 @@
+# plainJavaAdventOfCode
+Learning Java
+Daniel... Readme gehört dazu...
