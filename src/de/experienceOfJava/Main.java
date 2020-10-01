@@ -2,12 +2,19 @@ package de.experienceOfJava;
 
 import de.experienceOfJava.days.Day;
 import de.experienceOfJava.days.day1.Day1;
+import de.experienceOfJava.days.day2.Day2;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * @author Da-Br-1991
+ */
 public class Main {
-
+    /**
+     * menu function - choose one day of the adventOfCode challenge and get the solution as a return
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println("Bitte gebe eine Zahl zwischen 1 und 25 ein.");
 
@@ -30,7 +37,12 @@ public class Main {
                 }
                 break;
             case 2:
-                System.out.println("Day 2 not solved.");
+                Day day2= new Day2();
+                try {
+                    Day2.calculate();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
                 break;
             case 3:
                 System.out.println("Day 3 not solved.");
@@ -102,7 +114,7 @@ public class Main {
                 System.out.println("Day 25 not solved.");
                 break;
             default:
-                System.out.println("Wrong input! Insert a number!");
+                System.out.println("Wrong input! Insert a correct number!");
 
         }
     }

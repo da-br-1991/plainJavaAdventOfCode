@@ -5,15 +5,23 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Da-Br-1991
+ */
 public class ArrayListReaderService {
-    private ArrayList<String> result = new ArrayList<>();
-    public ArrayListReaderService(String path) throws FileNotFoundException {
+    /**
+     * Input-Werte aus einer txt-Datei einlesen
+     * @param path
+     * @return Input
+     * @throws FileNotFoundException
+     */
+    public ArrayList<String> read(String path) throws FileNotFoundException {
+        ArrayList<String> result = new ArrayList<>();
         Scanner scan = new Scanner(new File(path));
         while (scan.hasNext()) {
-            result.add(scan.nextLine());
+            result.add(scan.nextLine());                // Input einlesen
         }
-    }
-    public ArrayList<String> getArrayList() {
         return result;
     }
+
 }
