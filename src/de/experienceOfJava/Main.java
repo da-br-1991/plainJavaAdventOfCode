@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Main {
     /**
      * menu function - choose one day of the adventOfCode challenge and get the solution as a return
-     * @param args
+     * @param args psvm
      */
     public static void main(String[] args) {
         System.out.println("Bitte gebe eine Zahl zwischen 1 und 25 ein.");

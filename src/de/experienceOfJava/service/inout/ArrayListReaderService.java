@@ -11,9 +11,9 @@ import java.util.Scanner;
 public class ArrayListReaderService {
     /**
      * Input-Werte aus einer txt-Datei einlesen
-     * @param path
+     * @param path txt path
      * @return Input
-     * @throws FileNotFoundException
+     * @throws FileNotFoundException wrong file or no file error
      */
     public ArrayList<String> read(String path) throws FileNotFoundException {
         ArrayList<String> result = new ArrayList<>();
