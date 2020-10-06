@@ -1,6 +1,7 @@
 package de.experienceOfJava.days.day2;
 
 import de.experienceOfJava.days.Day;
+import de.experienceOfJava.service.calculation.Day2OpCodeSearcherService;
 import de.experienceOfJava.service.calculation.Day2OpCodeService;
 import de.experienceOfJava.service.conversion.Day2GravityAssistProgramService;
 import de.experienceOfJava.service.conversion.ArrayListSplitter;
@@ -24,20 +25,22 @@ public class Day2 implements Day {
         ArrayList<String> day2Input = readerService.read("src/de/experienceOfJava/resource/day2.txt");
 
         // ArrayList  day2input split after every comma
-        ArrayListSplitter splitService = new ArrayListSplitter();
-        List<String> day2Split = splitService.splitter(day2Input);
+        List<String> day2Split = ArrayListSplitter.splitter(day2Input);
 
+        //part 1 calculation:
         //Execute the gravity assist program: code 1202)
         Day2GravityAssistProgramService.gravityAssistProgram(day2Split, "1202");
-
         //Algorithm
-        Day2OpCodeService.day2part1Calc(day2Split);     //part1 calculation
+        Day2OpCodeService.day2part1Calc(day2Split);
 
-        //Output
-        //part1
-        System.out.print("solution part one: ");
-        System.out.println(day2Split.get(0));
-        //part2
+        //part 2 calculation:
+        int solCode = Day2OpCodeSearcherService.day2part2Calc(day2Input);
+        
+
+        //Output solution:
+        System.out.println("solution part one: " + day2Split.get(0));
+        System.out.println("");
+        System.out.println("solution part two: " + solCode);
 
     }
 }
