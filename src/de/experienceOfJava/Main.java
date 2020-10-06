@@ -3,6 +3,7 @@ package de.experienceOfJava;
 import de.experienceOfJava.days.Day;
 import de.experienceOfJava.days.day1.Day1;
 import de.experienceOfJava.days.day2.Day2;
+import de.experienceOfJava.days.day3.Day3;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -45,7 +46,9 @@ public class Main {
                 }
                 break;
             case 3:
-                System.out.println("Day 3 not solved.");
+                Day day3 = new Day3();
+                Day3.calculate();
+                //System.out.println("Day 3 not solved.");
                 break;
             case 4:
                 System.out.println("Day 4 not solved.");
