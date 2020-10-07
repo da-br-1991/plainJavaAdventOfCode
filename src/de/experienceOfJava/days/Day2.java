@@ -1,4 +1,4 @@
-package de.experienceOfJava.days.day2;
+package de.experienceOfJava.days;
 
 import de.experienceOfJava.days.Day;
 import de.experienceOfJava.service.calculation.Day2OpCodeSearcherService;
