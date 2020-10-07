@@ -1,4 +1,4 @@
-package de.experienceOfJava.days.day3;
+package de.experienceOfJava.days;
 
 import de.experienceOfJava.days.Day;
 import de.experienceOfJava.service.inout.ArrayListReaderService;

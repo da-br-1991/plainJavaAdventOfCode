@@ -1,4 +1,4 @@
-package de.experienceOfJava.days.day1;
+package de.experienceOfJava.days;
 
 import de.experienceOfJava.days.Day;
 

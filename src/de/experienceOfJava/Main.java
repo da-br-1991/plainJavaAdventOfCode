@@ -1,9 +1,6 @@
 package de.experienceOfJava;
 
-import de.experienceOfJava.days.Day;
-import de.experienceOfJava.days.day1.Day1;
-import de.experienceOfJava.days.day2.Day2;
-import de.experienceOfJava.days.day3.Day3;
+import de.experienceOfJava.days.*;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
