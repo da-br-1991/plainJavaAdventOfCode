@@ -1,6 +1,5 @@
 package de.experienceOfJava.days;
 
-import de.experienceOfJava.days.Day;
 import de.experienceOfJava.service.inout.ArrayListReaderService;
 
 import java.io.IOException;
@@ -21,8 +20,13 @@ public class Day3 implements Day {
         try {
             day3Input = readerService.readLinesInArrays(path);
             // separate 2 String-Lines
-            int inputLine = 0;
-            System.out.println(day3Input.get(inputLine));
+            for (String inputLine: day3Input) {
+                // calc movement
+                // separate inputLine by ","
+                String[] operatorsRow = inputLine.split(",")
+                // do more calculation stuff to convert it into movements
+            }
+
             //TODO Continue here!!!
 
         } catch (IOException e) {
