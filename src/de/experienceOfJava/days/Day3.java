@@ -23,7 +23,7 @@ public class Day3 implements Day {
             for (String inputLine: day3Input) {
                 // calc movement
                 // separate inputLine by ","
-                String[] operatorsRow = inputLine.split(",")
+                String[] operatorsRow = inputLine.split(",");
                 // do more calculation stuff to convert it into movements
             }
 
