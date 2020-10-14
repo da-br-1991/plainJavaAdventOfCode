@@ -13,7 +13,7 @@ public class Main {
      * menu function - choose one day of the adventOfCode challenge and get the solution as a return
      * @param args psvm
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Bitte gebe eine Zahl zwischen 1 und 25 ein.");
 
         menuAttribute(menuCaller());
@@ -24,7 +24,7 @@ public class Main {
         return scan.nextInt();
     }
 
-    public static void menuAttribute(int chosenDay) {
+    public static void menuAttribute(int chosenDay) throws Exception {
         switch (chosenDay) {
             case 1:
                 Day day1 = new Day1();
@@ -48,7 +48,8 @@ public class Main {
                 //System.out.println("Day 3 not solved.");
                 break;
             case 4:
-                System.out.println("Day 4 not solved.");
+                Day day4 = new Day4();
+                Day4.calculate();
                 break;
             case 5:
                 System.out.println("Day 5 not solved.");
