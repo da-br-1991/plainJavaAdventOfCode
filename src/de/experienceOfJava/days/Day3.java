@@ -20,11 +20,18 @@ public class Day3 implements Day {
         try {
             day3Input = readerService.readLinesInArrays(path);
             // separate 2 String-Lines
+            Long x1 = null;
+            Long y1 = null;
+            Long x2 = null;
+            Long y2 = null;
             for (String inputLine: day3Input) {
                 // calc movement
                 // separate inputLine by ","
-                String[] operatorsRow = inputLine.split(",");
+                String[] movements = inputLine.split(",");
                 // do more calculation stuff to convert it into movements
+                for(String movement : movements) {
+                    //array: input(zeilen(operatoren))
+                }
             }
 
             //TODO Continue here!!!
