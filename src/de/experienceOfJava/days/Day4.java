@@ -10,6 +10,7 @@ public class Day4 implements Day {
      * password generator and count passwords in a defined range
      */
     public static void calculate() {
+        // TODO: services ausgliedern
         //input insertion
         Scanner scan = new Scanner(System.in);
         System.out.println("Please insert your Input:");
