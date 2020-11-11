@@ -43,9 +43,12 @@ public class Main {
                 }
                 break;
             case 3:
-                Day day3 = new Day3();
-                Day3.calculate();
-                //System.out.println("Day 3 not solved.");
+                Day day3= new Day3();
+                try {
+                    Day3.calculate();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
                 break;
             case 4:
                 Day day4 = new Day4();
